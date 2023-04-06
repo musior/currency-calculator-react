@@ -174,7 +174,8 @@ table {
   border-spacing: 0;
 }
 
-body {
+body,
+div#root {
   background-color: #1c1d26;
   color: #fff;
   display: flex;
