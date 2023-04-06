@@ -1,6 +1,5 @@
 import { createLoader } from "./createLoader";
 
-const form = document.querySelector(".main-form");
 const inputValue = document.querySelector("#value");
 const select = document.querySelector("#main-select");
 const resultCalculate = document.querySelector(".main-currency-convertion");
@@ -17,6 +16,7 @@ const calculatedCurrency = (e) => {
     .then((response) => response.json())
     .then((data) => {
       const currentCurrencyCurse = data.rates[0].mid;
+      // eslint-disable-next-line no-useless-concat
       const calculate = Number(Math.round(`${currentCurrencyCurse * inputValue.value}` + 'e+2') + 'e-2');
       setTimeout(() => {
         resultCalculate.innerHTML = "";
