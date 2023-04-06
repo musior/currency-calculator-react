@@ -1,6 +1,8 @@
+import { calculatedCurrency } from "../utils/calculatedCurrency";
+
 const Form = ({ children }) => {
   return (
-    <form className="main-form">
+    <form className="main-form" onSubmit={calculatedCurrency}>
       <input
         type="number"
         name="value"
