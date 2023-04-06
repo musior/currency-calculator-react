@@ -1,4 +1,4 @@
-const Form = () => {
+const Form = ({ children }) => {
   return (
     <form className="main-form">
       <input
@@ -10,6 +10,7 @@ const Form = () => {
         step="0.01"
         min="0.01"
       />
+      {children}
     </form>
   );
 };
