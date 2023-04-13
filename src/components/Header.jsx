@@ -1,8 +1,10 @@
+import logo from "../assets/img/currency-converter-logo.png";
+
 const Header = () => {
   return (
     <header id="header">
       <div className="header-logo">
-        <img src="" alt="Currency converter logo" />
+        <img src={logo} alt="Currency converter logo" />
       </div>
       <div className="header-info">
         <h1 className="header-info-para">
