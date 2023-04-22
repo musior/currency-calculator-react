@@ -1,5 +1,3 @@
-import { createLoader } from "./createLoader";
-
 const inputValue = document.querySelector("#value");
 const select = document.querySelector("#main-select");
 const resultCalculate = document.querySelector(".main-currency-convertion");
@@ -9,8 +7,6 @@ const calculatedCurrency = (e) => {
   resultCalculate.innerHTML = "";
   const currency = select.options[select.selectedIndex].value;
   const url = `https://api.nbp.pl/api/exchangerates/rates/a/${currency}/`;
-
-  createLoader();
 
   fetch(url)
     .then((response) => response.json())
