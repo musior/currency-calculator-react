@@ -15,8 +15,8 @@ const Form = ({ setResult, setIsLoading }) => {
       .then((response) => response.json())
       .then((data) => {
         const currentCurrencyCurse = data.rates[0].mid;
-        // eslint-disable-next-line no-useless-concat
         const calculate = Number(
+          // eslint-disable-next-line no-useless-concat
           Math.round(`${currentCurrencyCurse * userInput}` + "e+2") + "e-2"
         );
         setIsLoading(false);
