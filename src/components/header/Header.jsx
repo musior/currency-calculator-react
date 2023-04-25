@@ -1,8 +1,9 @@
 import logo from "../../assets/img/currency-converter-logo.png";
+import "./header.css";
 
 const Header = () => {
   return (
-    <header id="header">
+    <header id="header" className="header">
       <div className="header-logo">
         <img src={logo} alt="Currency converter logo" />
       </div>

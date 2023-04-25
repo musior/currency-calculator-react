@@ -157,16 +157,7 @@ button {
   margin: 5px;
 }
 
-#header {
-  text-align: center;
-  margin-top: 1rem;
-  width: 100%;
-}
 
-.header-logo img {
-  width: 250px;
-  height: 250px;
-}
 
 #main {
   margin-top: 50px;
@@ -255,21 +246,6 @@ button {
 }
 
 @media screen and (min-width: 768px) {
-  #header {
-    display: flex;
-    align-items: center;
-    margin-top: 1rem;
-    width: 85%;
-  }
-
-  .header-logo {
-    padding-right: 3rem;
-  }
-
-  .header-info {
-    margin-left: 3rem;
-  }
-
   #value {
     width: auto;
   }
