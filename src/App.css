@@ -252,10 +252,6 @@ button {
 }
 
 @media screen and (min-width: 1440px) {
-  #header {
-    width: 60%;
-  }
-
   #main-submit:hover {
     background-color: #fff;
     color: #614c4c;
