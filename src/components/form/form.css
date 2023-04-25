@@ -1,0 +1,22 @@
+.main-form input {
+  background: transparent;
+  border: 2px solid #34b6c0;
+  border-radius: 15px;
+  font-size: 16px;
+  color: #fff;
+  outline: none;
+  margin: 5px;
+  padding: 5px 10px;
+
+  width: 90%;
+}
+
+.main-form input:focus {
+  border-color: #247b81;
+}
+
+@media screen and (min-width: 768px) {
+  .main-form input {
+    width: auto;
+  }
+}

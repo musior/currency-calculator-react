@@ -161,7 +161,7 @@ button {
 
 
 
-#value,
+
 #main-submit {
   background: transparent;
   border: 2px solid #34b6c0;
@@ -173,13 +173,6 @@ button {
   padding: 5px 10px;
 }
 
-#value {
-  width: 90%;
-}
-
-#value:focus {
-  border-color: #247b81;
-}
 
 
 
@@ -232,11 +225,7 @@ button {
   }
 }
 
-@media screen and (min-width: 768px) {
-  #value {
-    width: auto;
-  }
-}
+
 
 @media screen and (min-width: 1440px) {
   #main-submit:hover {
