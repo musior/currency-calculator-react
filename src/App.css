@@ -159,14 +159,7 @@ button {
 
 
 
-#main {
-  margin-top: 50px;
-  text-align: center;
-}
 
-.main-form {
-  margin-bottom: 50px;
-}
 
 #value,
 #main-select,
@@ -197,10 +190,7 @@ button {
   cursor: pointer;
 }
 
-.main-currency-convertion {
-  text-align: center;
-  margin-bottom: 2rem;
-}
+
 
 /* Loader styling */
 .lds-ring {

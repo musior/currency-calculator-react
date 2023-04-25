@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Form from "../form/Form";
 import Loader from "../loader/Loader";
+import "./main.css";
 
 const Main = () => {
   const [result, setResult] = useState("");
@@ -15,7 +16,7 @@ const Main = () => {
   };
 
   return (
-    <main id="main">
+    <main id="main" className="main">
       <Form setResult={handleSetResult} setIsLoading={handleSetIsLoading} />
       <div className="main-currency-convertion">
         {isLoading ? <Loader /> : <p>It's {result} PLN.</p>}
