@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Form from "./Form";
-import Loader from "./Loader";
+import Form from "../form/Form";
+import Loader from "../loader/Loader";
 
 const Main = () => {
   const [result, setResult] = useState("");

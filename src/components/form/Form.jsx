@@ -1,5 +1,5 @@
-import Button from "./Button";
-import Select from "./Select";
+import Button from "../button/Button";
+import Select from "../select/Select";
 
 const Form = ({ setResult, setIsLoading }) => {
   const calculatedCurrency = (e) => {

@@ -1,4 +1,4 @@
-import logo from "../assets/img/currency-converter-logo.png";
+import logo from "../../assets/img/currency-converter-logo.png";
 
 const Header = () => {
   return (
