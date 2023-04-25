@@ -5,10 +5,10 @@ import "./form.css";
 const Form = ({ setResult, setIsLoading }) => {
   const calculatedCurrency = (e) => {
     e.preventDefault();
-    const selectCurrency = e.target.currencySelect.value;
-    const userInput = e.target.userInput.value;
+    const currency = e.target.currencySelect.value;
+    const amount = e.target.userInput.value;
 
-    const url = `https://api.nbp.pl/api/exchangerates/rates/a/${selectCurrency}/`;
+    const url = `https://api.nbp.pl/api/exchangerates/rates/a/${currency}/`;
     setIsLoading(true);
 
     fetch(url)
@@ -17,7 +17,7 @@ const Form = ({ setResult, setIsLoading }) => {
         const currentCurrencyCurse = data.rates[0].mid;
         const calculate = Number(
           // eslint-disable-next-line no-useless-concat
-          Math.round(`${currentCurrencyCurse * userInput}` + "e+2") + "e-2"
+          Math.round(`${currentCurrencyCurse * amount}` + "e+2") + "e-2"
         );
         setIsLoading(false);
         setResult(calculate);
