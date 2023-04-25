@@ -162,23 +162,7 @@ button {
 
 
 
-#main-submit {
-  background: transparent;
-  border: 2px solid #34b6c0;
-  border-radius: 15px;
-  font-size: 16px;
-  color: #fff;
-  outline: none;
-  margin: 5px;
-  padding: 5px 10px;
-}
 
-
-
-
-#main-submit {
-  cursor: pointer;
-}
 
 
 
@@ -222,15 +206,5 @@ button {
 
   100% {
     transform: rotate(360deg);
-  }
-}
-
-
-
-@media screen and (min-width: 1440px) {
-  #main-submit:hover {
-    background-color: #fff;
-    color: #614c4c;
-    transition: 0.5s;
   }
 }

@@ -1,6 +1,8 @@
+import "./button.css";
+
 const Button = () => {
   return (
-    <button id="main-submit" className="btn" type="submit">
+    <button className="btn main-submit" type="submit">
       Calculate
     </button>
   );
