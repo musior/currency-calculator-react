@@ -15,12 +15,9 @@ const Form = ({ setResult, setIsLoading }) => {
       .then((response) => response.json())
       .then((data) => {
         const currentCurrencyCurse = data.rates[0].mid;
-        const calculate = Number(
-          // eslint-disable-next-line no-useless-concat
-          Math.round(`${currentCurrencyCurse * amount}` + "e+2") + "e-2"
-        );
+        const result = (currentCurrencyCurse * amount).toFixed(2);
         setIsLoading(false);
-        setResult(calculate);
+        setResult(result);
       })
       .catch((err) => console.log(err));
   };
