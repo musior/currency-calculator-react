@@ -2,7 +2,7 @@ import Button from "../button/Button";
 import Select from "../select/Select";
 import "./form.css";
 
-const Form = ({ setResult, setIsLoading }) => {
+const Form = ({ setResult, setIsLoading, setShowError }) => {
   const calculatedCurrency = (e) => {
     e.preventDefault();
     const currency = e.target.currencySelect.value;
@@ -10,6 +10,7 @@ const Form = ({ setResult, setIsLoading }) => {
 
     const url = `https://api.nbp.pl/api/exchangerates/rates/a/${currency}/`;
     setIsLoading(true);
+    setShowError(false);
 
     fetch(url)
       .then((response) => response.json())
@@ -19,7 +20,10 @@ const Form = ({ setResult, setIsLoading }) => {
         setIsLoading(false);
         setResult(result);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        setIsLoading(false);
+        setShowError(true);
+      });
   };
   return (
     <form className="main-form" onSubmit={calculatedCurrency}>

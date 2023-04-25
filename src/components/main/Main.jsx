@@ -6,6 +6,7 @@ import "./main.css";
 const Main = () => {
   const [result, setResult] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [showError, setShowError] = useState(false);
 
   const handleSetResult = (result) => {
     setResult(result);
@@ -15,11 +16,26 @@ const Main = () => {
     setIsLoading(isLoading);
   };
 
+  const handleError = (showError) => {
+    setShowError(showError);
+  };
+
   return (
     <main id="main" className="main">
-      <Form setResult={handleSetResult} setIsLoading={handleSetIsLoading} />
+      <Form
+        setResult={handleSetResult}
+        setIsLoading={handleSetIsLoading}
+        setShowError={handleError}
+      />
       <div className="main-currency-convertion">
-        {isLoading ? <Loader /> : <p>It's {result} PLN.</p>}
+        {showError ? (
+          <p>Something go wrong, please come back later!</p>
+        ) : isLoading ? (
+          <Loader />
+        ) : (
+          <p>It's {result} PLN.</p>
+        )}
+        {/*isLoading ? <Loader /> : <p>It's {result} PLN.</p>*/}
       </div>
     </main>
   );
