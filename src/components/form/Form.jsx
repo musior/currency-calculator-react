@@ -15,10 +15,14 @@ const Form = ({ setResult, setIsLoading, setShowError }) => {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        const currentCurrencyCurse = data.rates[0].mid;
-        const result = (currentCurrencyCurse * amount).toFixed(2);
-        setIsLoading(false);
-        setResult(result);
+        if (data.rates.length > 0) {
+          const currentCurrencyCurse = data.rates[0].mid;
+          const result = (currentCurrencyCurse * amount).toFixed(2);
+          setIsLoading(false);
+          setResult(result);
+        } else {
+          setShowError(true);
+        }
       })
       .catch((err) => {
         setIsLoading(false);
