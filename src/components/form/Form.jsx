@@ -5,7 +5,6 @@ import "./form.css";
 const Form = ({ setResult, setIsLoading }) => {
   const calculatedCurrency = (e) => {
     e.preventDefault();
-    console.log(e.target.userInput.value);
     const selectCurrency = e.target.currencySelect.value;
     const userInput = e.target.userInput.value;
 
