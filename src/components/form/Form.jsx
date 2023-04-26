@@ -1,6 +1,6 @@
 import Button from "../button/Button";
 import Select from "../select/Select";
-import "./form.css";
+import "./Form.css";
 
 const Form = ({ setResult, setIsLoading, setShowError }) => {
   const calculatedCurrency = (e) => {
@@ -18,15 +18,16 @@ const Form = ({ setResult, setIsLoading, setShowError }) => {
         if (data.rates.length > 0) {
           const currentCurrencyCurse = data.rates[0].mid;
           const result = (currentCurrencyCurse * amount).toFixed(2);
-          setIsLoading(false);
           setResult(result);
         } else {
           setShowError(true);
         }
       })
       .catch((err) => {
-        setIsLoading(false);
         setShowError(true);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   };
   return (
