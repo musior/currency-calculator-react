@@ -28,14 +28,11 @@ const Main = () => {
         setShowError={handleError}
       />
       <div className="main-currency-convertion">
-        {showError ? (
-          <p>Something go wrong, please come back later!</p>
-        ) : isLoading ? (
-          <Loader />
-        ) : (
-          <p>It's {result} PLN.</p>
+        {showError && (
+          <p>Something go wrong, please come back later or try again!</p>
         )}
-        {/*isLoading ? <Loader /> : <p>It's {result} PLN.</p>*/}
+        {isLoading && <Loader />}
+        {!showError && !isLoading && result && <p>It's {result} PLN.</p>}
       </div>
     </main>
   );
