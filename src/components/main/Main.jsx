@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Form from "../form/Form";
 import Loader from "../loader/Loader";
-import "./main.css";
+import "./Main.css";
 
 const Main = () => {
   const [result, setResult] = useState("");
