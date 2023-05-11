@@ -1,5 +1,5 @@
 import logo from "../../assets/img/currency-converter-logo.png";
-import "./Header.css";
+import "./header.css";
 
 const Header = () => {
   return (
