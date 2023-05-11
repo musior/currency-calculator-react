@@ -1,4 +1,4 @@
-import "./Select.css";
+import "./select.css";
 
 const Select = () => {
   return (
